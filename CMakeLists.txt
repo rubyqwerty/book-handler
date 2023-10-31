@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(testpr CXX)
+project(books_handler CXX)
 
 include(CheckIncludeFileCXX)
 

@@ -7,18 +7,18 @@ using namespace drogon;
 
 namespace users_handler
 {
-class User : public drogon::HttpController<User>
+class Books : public drogon::HttpController<Books>
 {
   public:
     METHOD_LIST_BEGIN
     // use METHOD_ADD to add your custom processing function here;
-    METHOD_ADD(User::Add_book, "/addBook?name={1}&genre={2}&autor={3}", Post);
-    METHOD_ADD(User::Get_book_by_autor, "/getBookByAutor?name={1}", Get);
-    METHOD_ADD(User::Get_book_by_genre, "/getBookByGenre?genre={1}", Get);
-    METHOD_ADD(User::Get_books, "/getBooks", Get);
-    METHOD_ADD(User::Delete_book, "/deleteBook?id_book={1}", Delete);
-    METHOD_ADD(User::Update_book, "/updateBook?id_book={1}&name={2}&genre={3}&autor={4}", Put);
-    METHOD_ADD(User::Help, "/help", Get);
+    METHOD_ADD(Books::Add_book, "/addBook?name={1}&genre={2}&autor={3}", Post);
+    METHOD_ADD(Books::Get_book_by_autor, "/getBookByAutor?name={1}", Get);
+    METHOD_ADD(Books::Get_book_by_genre, "/getBookByGenre?genre={1}", Get);
+    METHOD_ADD(Books::Get_books, "/getBooks", Get);
+    METHOD_ADD(Books::Delete_book, "/deleteBook?id_book={1}", Delete);
+    METHOD_ADD(Books::Update_book, "/updateBook?id_book={1}&name={2}&genre={3}&autor={4}", Put);
+    METHOD_ADD(Books::Help, "/help", Get);
     METHOD_LIST_END
     void Add_book(const HttpRequestPtr &req,
                std::function<void (const HttpResponsePtr &)> &&callback,

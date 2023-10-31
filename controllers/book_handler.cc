@@ -12,7 +12,7 @@ Json::Value Book_to_json(drogon_model::users::Books book) {
     return result;
 }
 
-void users_handler::User::Add_book(
+void users_handler::Books::Add_book(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback,
     const std::string& name,
@@ -32,7 +32,7 @@ void users_handler::User::Add_book(
     callback(response);
 }
 
-void users_handler::User::Get_book_by_autor(
+void users_handler::Books::Get_book_by_autor(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback,
     const std::string& autor)
@@ -47,7 +47,7 @@ void users_handler::User::Get_book_by_autor(
     callback(response);
 }
 
-void users_handler::User::Get_book_by_genre(
+void users_handler::Books::Get_book_by_genre(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback,
     const std::string& genre)
@@ -63,7 +63,7 @@ void users_handler::User::Get_book_by_genre(
 }
 
 
-void users_handler::User::Get_books(
+void users_handler::Books::Get_books(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback)
 {
@@ -82,7 +82,7 @@ void users_handler::User::Get_books(
 
 }
 
-void users_handler::User::Delete_book(
+void users_handler::Books::Delete_book(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback,
     const std::string& id_book)
@@ -96,7 +96,7 @@ void users_handler::User::Delete_book(
     callback(response);
 }
 
-void users_handler::User::Update_book(
+void users_handler::Books::Update_book(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback,
     const std::string& id_book,
@@ -115,7 +115,7 @@ void users_handler::User::Update_book(
     callback(response);
 }
 
-void users_handler::User::Help(
+void users_handler::Books::Help(
     const HttpRequestPtr& req,
     std::function<void(const HttpResponsePtr&)>&& callback)
 {
